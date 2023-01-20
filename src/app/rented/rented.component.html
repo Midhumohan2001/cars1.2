@@ -1,0 +1,27 @@
+<div class="table" style=" background-color: rgb(182, 179, 179);">
+
+    <table class="container w-75 mt-5 text-center border border-2">
+        <thead class="border-2 p-2">
+            <tr class=" border border-2 p-3">
+                <th class=" border border-2 p-3">#</th>
+                <th class=" border border-2 p-3">Model</th>
+                <th class=" border border-2 p-3">Days Rented</th>
+                <th class=" border border-2 p-3">Total Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody *ngFor="let i of rentedcardata">
+            <tr class=" border border-2 p-3">
+                <td class=" border border-2 p-3">
+                  <img src={{i.image}} alt="" class="w-75 " style="aspect-ratio: 2/1;">
+                </td>
+                <td class=" border border-2 p-3" style="text-transform: capitalize;">{{i.name}}</td>
+                <td class=" border border-2 p-3">{{i.days}}</td>
+                <td class=" border border-2 p-3">₹ {{i.totalprice}}</td>
+                <td><button type="submit" class="btn btn-danger" (click)="deletecarrented(i.name)"><i class="fa-regular fa-trash-can"></i></button></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
